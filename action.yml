@@ -1,9 +1,9 @@
 name: 'Alibaba Cloud Container Registry (ACR) Image Scan'
 description: 'Scan image in container registry'
 inputs: 
-  access-key-id:
+  access-key-id:'<access key id>
     description: 'Access key id'
-    required: true
+    required: 
     default: ''
   access-key-secret:
     description: 'Access key secret'
@@ -13,7 +13,7 @@ inputs:
     description: 'STS token'
     required: false
     default: ''
-  region-id:
+  region-id:'<region id>' # example cn:hangzhou
     description: 'Region id'
     required: false
     default: 'cn-hangzhou'
@@ -23,7 +23,7 @@ inputs:
     default: ''
   repository:
     description: 'Image repository name including namespace/name'
-    required: true
+    required: aliyun/acr-sc@v1
     default: ''
   tag:
     description: 'Image tag'
